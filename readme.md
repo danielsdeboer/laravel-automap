@@ -32,7 +32,7 @@ Take whatever portion of your routes you want to abstract away and move them to 
 For example, your controller ```app/Http/Controllers/SuperSecret/SuperSecretController.php``` might look something like this:
 
 ```php
-namespace App\Http\Controllers\SuperSecretController;
+namespace App\Http\Controllers\SuperSecret;
 ...
 class SuperSecretController extends Controller
 {
