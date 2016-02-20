@@ -11,9 +11,9 @@ Or you can use ```AutoMapServiceProvider``` and have all the routes files you li
 This means that if you have this folder structure:
 
 ```
-app/Controllers/Foo/FooController.php
+app/Http/Controllers/Foo/FooController.php
 
-app/Routes/Foo/routes.php
+app/Http/Routes/Foo/routes.php
 ```
 these will be automatically mapped to each other and available to Laravel.
 
