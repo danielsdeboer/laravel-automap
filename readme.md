@@ -36,8 +36,8 @@ namespace App\Http\Controllers\SuperSecret;
 ...
 class SuperSecretController extends Controller
 {
-    public function hidden () {
-        return "Security through obscurity"
+    public function hidden() {
+        return "Security through obscurity";
     }
 }
 ```
@@ -48,11 +48,11 @@ and your routes file ```app/Http/Routes/SuperSecret/routes.php``` might have thi
 Route::get('super/secret/hidden', 'SuperSecretController@hidden')->name('some-name');
 ```
 
-And that's it! You don't have to register the directory anywhere, you don't have to make any assocation betwen the two. It just works, and things like route names are available throughout your application.
+And that's it! You don't have to register the directory anywhere, you don't have to make any assocation betwen the two. It just works, and things like route names are available throughout your application. You also don't have to prepend the controller with its subdirectory like you would using Laravel's base controller.
 
 ### Notes
 
-You can use this alongside Laravel's ```RoutesServiceProvider```. However if you want to completely replace it, just add your default controller namespacing and routes file location to the ```automaps``` array. The autoMap() method appends to this array so you'll be fine.
+You can use this alongside Laravel's ```RouteServiceProvider```. However if you want to completely replace it, just add your default controller namespacing and routes file location to the ```automaps``` array and remove ```RouteServiceProvider``` from ```config/app.php```. The autoMap() method appends to this array so you'll be fine.
 
 ### Contributing
 
